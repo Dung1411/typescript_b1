@@ -26,3 +26,18 @@ function sum(numA: number, numB:number):number {
     return numA + numB;
 }
 console.log(sum(a,b));
+
+const show = <T,U>(a: T, b: U)=>{
+    return [a,b];
+}
+show(10,"20");
+show("le","dung");
+
+type Product = {
+    id: number,
+    name: string
+}
+const getProducts = <T extends Product>(products: T[])=>{
+    const result = products.map(item => `<div>${item.name}</div>`)
+}
+getProducts([{id: 1,name: "A"}, {id:2, name: "B"}]);

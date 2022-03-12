@@ -15,4 +15,13 @@ function sum(numA, numB) {
     return numA + numB;
 }
 console.log(sum(a, b));
+const show = (a, b) => {
+    return [a, b];
+};
+show(10, "20");
+show("le", "dung");
+const getProducts = (products) => {
+    const result = products.map(item => `<div>${item.name}</div>`);
+};
+getProducts([{ id: 1, name: "A" }, { id: 2, name: "B" }]);
 //# sourceMappingURL=app.js.map
