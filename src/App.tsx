@@ -1,34 +1,52 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import ShowInfo from './components/Showinfo'
+import ShowInfo from './components/ShowInfo'
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [myName, setMyname] = useState("Le thi dung");
-  const [status, setStatus] = useState(false);
-  const [info, setInfo] = useState({ name: "Dung", age: 24});
-  const [products, setProducts] = useState([
-    {id:1, name: "Product A"},
-    {id:2, name: "Product B"},
-    {id:3, name: "Product C"},
-  ])
+  const [count, setCount] = useState<number>(0);
+  const [myName, setMyName] = useState<string>("Le Thị dung");
+  const [status, setStatus] = useState<boolean>(false);
+  const [info, setInfo] = useState<{name: string, age: number}>({ name: "Dung", age: 20});
+  const [products, setProducts] = useState<{id: number, name: string}[]>([
+    {id: 1, name: "Product A"},
+    {id: 2, name: "Product B"},
+    {id: 3, name: "Product C"}
+  ]);
+
+
+  const removeItem = (id: number) => {
+    const newsProduct = products.filter(item => item.id !== id);
+    setProducts(newsProduct)
+  }
   return (
     <div className="App">
-      Count: {count}
+      Count: {count} <button onClick={() => setCount(count + 1)}>Click</button>
       <hr />
-      Full Name: {myName}
+      Full Name: {myName} <button onClick={() => setMyName("dao quoc huu")}>Change Name</button>
       <hr />
-      Status: {status ? "true" : "false"}
+      Status: {status ? "True" : "False"}
       <hr />
       Info: {info.name} - {info.age}
       <hr />
-      Product: {products.map(item => <div>{item.name}</div>)}
+      Products: { products.map(item => <div>{item.name} <button onClick={() => removeItem(item.id)}>Remove</button></div>)}
       <hr />
-      Component: Showinfo
-      <ShowInfo name="dung" age= {20}/>
+      Component: ShowInfo
+      <ShowInfo name="Dung" age={20}/>
     </div>
   )
 }
 
 export default App
+
+
+// function useState(state){
+//   return [state, function(){}];
+// }
+
+// const [firstValue, secondValue] = useState(10);
+// console.log(firstValue) // 10
+
+// secondValue(20); //
+
+// console.log(firstValue) // 20
