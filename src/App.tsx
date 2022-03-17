@@ -1,52 +1,38 @@
-import { useState } from 'react'
+import {useEffect ,useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import ShowInfo from './components/ShowInfo'
+import { Navigate, NavLink, Route, Routes } from 'react-router-dom'
+import Homepage from './pages/Homepage'
+import ProductPage from './pages/Products'
+import Header from './components/Header'
+import WebsiteLayout from './pages/layouts/WebsiteLayout'
+import AdminLayout from './pages/layouts/AdminLayour'
 
 function App() {
-  const [count, setCount] = useState<number>(0);
-  const [myName, setMyName] = useState<string>("Le Thị dung");
-  const [status, setStatus] = useState<boolean>(false);
-  const [info, setInfo] = useState<{name: string, age: number}>({ name: "Dung", age: 20});
-  const [products, setProducts] = useState<{id: number, name: string}[]>([
-    {id: 1, name: "Product A"},
-    {id: 2, name: "Product B"},
-    {id: 3, name: "Product C"}
-  ]);
-
-
-  const removeItem = (id: number) => {
-    const newsProduct = products.filter(item => item.id !== id);
-    setProducts(newsProduct)
-  }
+  const [products, setProducts] = useState([]);
+  useEffect(()=>{
+    const getProducts = async () =>{
+      const response = await fetch('http://localhost:8000/api/products/');
+      const data = await response.json();
+      setProducts(data);
+    }
+    getProducts();
+  }, []);
   return (
-    <div className="App">
-      Count: {count} <button onClick={() => setCount(count + 1)}>Click</button>
-      <hr />
-      Full Name: {myName} <button onClick={() => setMyName("dao quoc huu")}>Change Name</button>
-      <hr />
-      Status: {status ? "True" : "False"}
-      <hr />
-      Info: {info.name} - {info.age}
-      <hr />
-      Products: { products.map(item => <div>{item.name} <button onClick={() => removeItem(item.id)}>Remove</button></div>)}
-      <hr />
-      Component: ShowInfo
-      <ShowInfo name="Dung" age={20}/>
+    <div className="container">
+        <Routes>
+          <Route path="/" element={<WebsiteLayout />}>
+              <Route index element={<Homepage />} />
+              <Route path="product" element={<h1>Product Page</h1>}/>
+              <Route path='about' element = {<h1>About me</h1>}/>
+          </Route>
+          <Route path="admin" element={<AdminLayout />}>
+              <Route index element={<Navigate to="dashboard" />} />
+              <Route path="dashboard" element={<h1>Dashboard page</h1>} />
+          </Route>
+        </Routes>
     </div>
   )
 }
 
 export default App
-
-
-// function useState(state){
-//   return [state, function(){}];
-// }
-
-// const [firstValue, secondValue] = useState(10);
-// console.log(firstValue) // 10
-
-// secondValue(20); //
-
-// console.log(firstValue) // 20
