@@ -17,7 +17,7 @@ const Header = (props: Props) => {
                 <Search />
                 </div>
             </div>
-            </nav>
+    </nav>
 
   )
 }

@@ -1,12 +1,16 @@
 {
-  "products": [
+  "users": [
     {
-      "id": 2,
-      "name": "Product b"
+      "email": "Dungltph14568@fpt.edu.vn",
+      "password": "$2a$10$ETdX0vcxsM4Tl2bKNCCcJulhzuQ6BTzvNBSf3QROhnrqf1.BDNHO6",
+      "name": "Le  Thi Dung",
+      "id": 1
     },
     {
-      "id": 3,
-      "name": "Product c"
+      "email": "admin@gmail.com",
+      "password": "$2a$10$pxSMXzsWLM6bCTE4HD6ImOogkZk9QmfFz1tz9f85l.Mps1p9yoD1q",
+      "name": "Le Dung",
+      "id": 2
     }
   ]
 }

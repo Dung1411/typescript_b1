@@ -1,6 +1,6 @@
 import {useEffect ,useState } from 'react'
 import logo from './logo.svg'
-import './App.css'
+// import './App.css'
 import { Navigate, NavLink, Route, Routes } from 'react-router-dom'
 import Homepage from './pages/Homepage'
 import ProductPage from './pages/Products'
@@ -9,9 +9,12 @@ import WebsiteLayout from './pages/layouts/WebsiteLayout'
 import AdminLayout from './pages/layouts/AdminLayout'
 import ProductManager from './pages/ProductManager'
 import ProductDetail from './pages/ProductDetail'
-import {list, remove } from './api/Product'
+import {add ,list, remove, update } from './api/Product'
 import {ProductType} from './pages/types/product'
-
+import ProductAdd from './pages/ProductAdd'
+import ProductEdit from './pages/ProductEdit'
+import Singup  from './pages/Singup'
+import SignIn from './pages/Singin'
 
 function App() {
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -26,7 +29,7 @@ function App() {
     }
     getProducts();
   }, []);
-  const removeItem = (id) => {
+  const removeItem = (id : number) => {
     console.log('app.js', id);
     remove(id);
 
@@ -34,6 +37,14 @@ function App() {
 
 
     // setProduct()
+  }
+  const onHanldeAdd = (data : ProductType) => {
+    add(data);
+    setProducts([...products, data])
+  }
+  const onHanldeUpdate = async (product: ProductType) =>{
+    const {data} = await update(product);
+    setProducts(products.map(item => item.id === data.id ? data:item));
   }
   return (
 
@@ -51,10 +62,19 @@ function App() {
               <Route index element={<Navigate to="dashboard" />} />
               <Route path="dashboard" element={<h1>Dashboard page</h1>} />
               <Route path="products" element={<ProductManager products={products} onRemove={removeItem}/>} />
+              <Route path="/admin/products/add" element={<ProductAdd onAdd={onHanldeAdd}/>} />
+              <Route path=":id/edit" element={<ProductEdit onUpdate={onHanldeUpdate} />}/>
           </Route>
+          <Route path='/singup' element={<Singup />}/>
+          <Route path='/singin' element={<SignIn />}/>
         </Routes>
     </div>
   )
 }
 
 export default App
+//  state lưu trữ dữ liệu
+// props để chuyển dữ liệu 
+// {} giá trị bắt buộc 1 hàm chỉ gọi tên khi truyền lên
+//  typescript[] mảng có nhiều OBj
+// nếu trong thẻ thì props.chrildren, nếu thuộc tính thì props.name 
