@@ -1,6 +1,8 @@
 export type UserType ={ 
-    id: Number,
-    email: String,
-    name: String,
-    password: String
+    id: number,
+    email: string,
+    name: string,
+    password: string,
+    role : number,
+    status : string
 }

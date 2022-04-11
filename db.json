@@ -1,16 +1,246 @@
 {
+  "products": [
+    {
+      "name": "Iphone 5 :)) ",
+      "price": "2300",
+      "desc": "Hiệu năng vượt trội với vi xử lý mới nhất - Chip Apple A15 tiên tiến nhất, cân mọi tác vụ Tận hưởng không gian hiển thị sắc nét - Màn hình Liquid Retina nhỏ gọn 4.7 inch tỷ lệ 16:9 Giải trí trọn vẹn ngày dài - Viên pin có nhiều cải tiến giúp bạn không còn lo lắng khi sử dụng Camera ghi trọn mọi khoảnh khắc - Camera đơn 12 MP f/1.8 hỗ trợ công nghệ Deep Fusion",
+      "color": [
+        {
+          "colorName": "Trắng",
+          "hex": "#ffffff"
+        },
+        {
+          "colorName": "Đen",
+          "hex": "#000000"
+        },
+        {
+          "colorName": "Đỏ",
+          "hex": "#F5000A"
+        },
+        {
+          "colorName": "Gold",
+          "hex": "#FDECD8"
+        }
+      ],
+      "img": "https://cf.shopee.vn/file/d59ab7e432cc8c7abeea400b1605f5e4",
+      "id": 1
+    },
+    {
+      "name": "Iphone 6 :)) ",
+      "price": "2300",
+      "desc": "Hiệu năng vượt trội với vi xử lý mới nhất - Chip Apple A15 tiên tiến nhất, cân mọi tác vụ Tận hưởng không gian hiển thị sắc nét - Màn hình Liquid Retina nhỏ gọn 4.7 inch tỷ lệ 16:9 Giải trí trọn vẹn ngày dài - Viên pin có nhiều cải tiến giúp bạn không còn lo lắng khi sử dụng Camera ghi trọn mọi khoảnh khắc - Camera đơn 12 MP f/1.8 hỗ trợ công nghệ Deep Fusion",
+      "color": [
+        {
+          "colorName": "Trắng",
+          "hex": "#ffffff"
+        },
+        {
+          "colorName": "Đen",
+          "hex": "#000000"
+        },
+        {
+          "colorName": "Đỏ",
+          "hex": "#F5000A"
+        },
+        {
+          "colorName": "Gold",
+          "hex": "#FDECD8"
+        }
+      ],
+      "img": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-7-black_15.jpg",
+      "id": 2
+    },
+    {
+      "name": "Iphone 7 :)) ",
+      "price": "2300",
+      "desc": "Hiệu năng vượt trội với vi xử lý mới nhất - Chip Apple A15 tiên tiến nhất, cân mọi tác vụ Tận hưởng không gian hiển thị sắc nét - Màn hình Liquid Retina nhỏ gọn 4.7 inch tỷ lệ 16:9 Giải trí trọn vẹn ngày dài - Viên pin có nhiều cải tiến giúp bạn không còn lo lắng khi sử dụng Camera ghi trọn mọi khoảnh khắc - Camera đơn 12 MP f/1.8 hỗ trợ công nghệ Deep Fusion",
+      "color": [
+        {
+          "colorName": "Trắng",
+          "hex": "#ffffff"
+        },
+        {
+          "colorName": "Đen",
+          "hex": "#000000"
+        },
+        {
+          "colorName": "Đỏ",
+          "hex": "#F5000A"
+        },
+        {
+          "colorName": "Gold",
+          "hex": "#FDECD8"
+        }
+      ],
+      "img": "https://image.cellphones.com.vn/358x/media/catalog/product/i/m/img_9665_8_1_1_1.jpg",
+      "id": 3
+    },
+    {
+      "name": "Iphone 8 tạm ",
+      "price": "2300",
+      "desc": "Hiệu năng vượt trội với vi xử lý mới nhất - Chip Apple A15 tiên tiến nhất, cân mọi tác vụ Tận hưởng không gian hiển thị sắc nét - Màn hình Liquid Retina nhỏ gọn 4.7 inch tỷ lệ 16:9 Giải trí trọn vẹn ngày dài - Viên pin có nhiều cải tiến giúp bạn không còn lo lắng khi sử dụng Camera ghi trọn mọi khoảnh khắc - Camera đơn 12 MP f/1.8 hỗ trợ công nghệ Deep Fusion",
+      "color": [
+        {
+          "colorName": "Trắng",
+          "hex": "#ffffff"
+        },
+        {
+          "colorName": "Đen",
+          "hex": "#000000"
+        },
+        {
+          "colorName": "Đỏ",
+          "hex": "#F5000A"
+        },
+        {
+          "colorName": "Gold",
+          "hex": "#FDECD8"
+        }
+      ],
+      "img": "https://didongviet.vn//pub/media/catalog/product//a/p/apple-iphone-8-plus-do-didongviet_1.jpg",
+      "id": 4
+    },
+    {
+      "name": "Iphone 11 Pro Mắc ",
+      "price": "2300000",
+      "desc": "Hiệu năng vượt trội với vi xử lý mới nhất - Chip Apple A15 tiên tiến nhất, cân mọi tác vụ Tận hưởng không gian hiển thị sắc nét - Màn hình Liquid Retina nhỏ gọn 4.7 inch tỷ lệ 16:9 Giải trí trọn vẹn ngày dài - Viên pin có nhiều cải tiến giúp bạn không còn lo lắng khi sử dụng Camera ghi trọn mọi khoảnh khắc - Camera đơn 12 MP f/1.8 hỗ trợ công nghệ Deep Fusion",
+      "color": [
+        {
+          "colorName": "Trắng",
+          "hex": "#ffffff"
+        },
+        {
+          "colorName": "Đen",
+          "hex": "#000000"
+        },
+        {
+          "colorName": "Đỏ",
+          "hex": "#F5000A"
+        },
+        {
+          "colorName": "Gold",
+          "hex": "#FDECD8"
+        }
+      ],
+      "img": "https://image.cellphones.com.vn/358x/media/catalog/product/l/a/layer_24_2.jpg",
+      "id": 5
+    },
+    {
+      "name": "Iphone  12 Pro ",
+      "price": "25000000",
+      "desc": "Hiệu năng vượt trội với vi xử lý mới nhất - Chip Apple A15 tiên tiến nhất, cân mọi tác vụ Tận hưởng không gian hiển thị sắc nét - Màn hình Liquid Retina nhỏ gọn 4.7 inch tỷ lệ 16:9 Giải trí trọn vẹn ngày dài - Viên pin có nhiều cải tiến giúp bạn không còn lo lắng khi sử dụng Camera ghi trọn mọi khoảnh khắc - Camera đơn 12 MP f/1.8 hỗ trợ công nghệ Deep Fusion",
+      "color": [
+        {
+          "colorName": "Trắng",
+          "hex": "#ffffff"
+        },
+        {
+          "colorName": "Đen",
+          "hex": "#000000"
+        },
+        {
+          "colorName": "Đỏ",
+          "hex": "#F5000A"
+        },
+        {
+          "colorName": "Gold",
+          "hex": "#FDECD8"
+        }
+      ],
+      "img": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-12-pro-max_4_.jpg",
+      "id": 6
+    },
+    {
+      "name": "Iphone 13 cực Max",
+      "price": "25000000",
+      "desc": "Hiệu năng vượt trội với vi xử lý mới nhất - Chip Apple A15 tiên tiến nhất, cân mọi tác vụ Tận hưởng không gian hiển thị sắc nét - Màn hình Liquid Retina nhỏ gọn 4.7 inch tỷ lệ 16:9 Giải trí trọn vẹn ngày dài - Viên pin có nhiều cải tiến giúp bạn không còn lo lắng khi sử dụng Camera ghi trọn mọi khoảnh khắc - Camera đơn 12 MP f/1.8 hỗ trợ công nghệ Deep Fusion",
+      "color": [
+        {
+          "colorName": "Trắng",
+          "hex": "#ffffff"
+        },
+        {
+          "colorName": "Đen",
+          "hex": "#000000"
+        },
+        {
+          "colorName": "Đỏ",
+          "hex": "#F5000A"
+        },
+        {
+          "colorName": "Gold",
+          "hex": "#FDECD8"
+        }
+      ],
+      "img": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-13-02_2.jpg",
+      "id": 7
+    },
+    {
+      "name": "Iphone X hơi max",
+      "price": "132",
+      "desc": "Hiệu năng vượt trội với vi xử lý mới nhất - Chip Apple A15 tiên tiến nhất, cân mọi tác vụ Tận hưởng không gian hiển thị sắc nét - Màn hình Liquid Retina nhỏ gọn 4.7 inch tỷ lệ 16:9 Giải trí trọn vẹn ngày dài - Viên pin có nhiều cải tiến giúp bạn không còn lo lắng khi sử dụng Camera ghi trọn mọi khoảnh khắc - Camera đơn 12 MP f/1.8 hỗ trợ công nghệ Deep Fusion",
+      "color": [
+        {
+          "colorName": "Trắng",
+          "hex": "#ffffff"
+        },
+        {
+          "colorName": "Đen",
+          "hex": "#000000"
+        },
+        {
+          "colorName": "Đỏ",
+          "hex": "#F5000A"
+        },
+        {
+          "colorName": "Gold",
+          "hex": "#FDECD8"
+        }
+      ],
+      "img": "https://didongviet.vn/pub/media/catalog/product//i/p/iphone-xs-mau-gold-didongviet.jpg",
+      "id": 8
+    }
+  ],
   "users": [
     {
       "email": "Dungltph14568@fpt.edu.vn",
       "password": "$2a$10$ETdX0vcxsM4Tl2bKNCCcJulhzuQ6BTzvNBSf3QROhnrqf1.BDNHO6",
       "name": "Le  Thi Dung",
-      "id": 1
+      "id": 1,
+      "role": "1",
+      "status": "active"
     },
     {
       "email": "admin@gmail.com",
       "password": "$2a$10$pxSMXzsWLM6bCTE4HD6ImOogkZk9QmfFz1tz9f85l.Mps1p9yoD1q",
       "name": "Le Dung",
-      "id": 2
+      "id": 2,
+      "role": "1",
+      "status": "active"
+    },
+    {
+      "email": "ledung.14111998@gmail.com",
+      "password": "$2a$10$A9AGxR0KqNmybljwnp.OR.sspXQuRDKqOXptb5tFENwIJtSOTFcqe",
+      "name": "Admin",
+      "id": 3,
+      "role": "0",
+      "status": "active"
+    },
+    {
+      "email": "annhien@gmail.com",
+      "password": "$2a$10$JxSdpH4ruK2Sl5pAyFMuWuXNVd5c6Yw3sk7/KcKx71NIfMbf1z7oq",
+      "name": "Le  Thi Dung",
+      "role": 1,
+      "id": 4,
+      "status": "active"
+    },
+    {
+      "email": "nam@gmail.com",
+      "password": "$2a$10$9P75KO9OP/b68Juot1YbzO64o71W02WoQTAvAXEqEm8/.JhZV9Piu",
+      "name": "nấm",
+      "role": 1,
+      "status": "active",
+      "id": 5
     }
   ]
 }

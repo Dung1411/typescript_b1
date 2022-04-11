@@ -1,13 +1,17 @@
+import { Slider } from 'antd'
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import Slidebar from '../../components/Sidebar'
 
 type Props = {}
 
 const AdminLayout = (props: Props) => {
   return (
     <div>
-        <header>Header Amin</header>
-        <aside>Aside</aside>
+        <header className='header_admin'>
+          <Slidebar  />
+        </header>
+        
         <main>
            <Outlet />
         </main>

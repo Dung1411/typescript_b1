@@ -15,8 +15,14 @@ import ProductAdd from './pages/ProductAdd'
 import ProductEdit from './pages/ProductEdit'
 import Singup  from './pages/Singup'
 import SignIn from './pages/Singin'
+import UserManager from './pages/UserManager'
+import Products from './pages/Products'
 
 function App() {
+  // để mai có mic tôi nói lại nhé
+  // dễ hiểu thôi 
+  // ghi nó mỏi tay quá đúng r
+  // đó bây h nấm fix css nhé
   const [products, setProducts] = useState<ProductType[]>([]);
   useEffect(()=>{
     const getProducts = async () =>{
@@ -30,17 +36,39 @@ function App() {
     getProducts();
   }, []);
   const removeItem = (id : number) => {
-    console.log('app.js', id);
+    // ok
+    // call api chỗ này nấm hiểu chứ 
     remove(id);
 
-    setProducts(products.filter(item => item.id !== id));
-
+    // cái đoạn này là lọc để render lại sản phẩm
+    // đoan này là lọc đúng rồi : filter nó sẽ lọc cái điều kiện và trả về một mảng mới
+    // chĩns xác trong đây là loại đi id tìm thấy
+    setProducts(products.filter((item : ProductType) => item.id !== id));
+    // thêm nhá có page đó chưa nhỉ
 
     // setProduct()
   }
-  const onHanldeAdd = (data : ProductType) => {
-    add(data);
-    setProducts([...products, data])
+  //  đẻe tôi giải thích luồng nhé
+  // đây là file root
+  // có nghĩa là mình phải đặt hàm remove ở đây
+  // nếu mà đặt ở dưới kia ấy thì không thể nào có thể xóa sản phẩm ở giao diện được tại vì sản phẩm nó lưu ở component này và được truyền xuống
+  // đúng rồi Nấm nhớ cái này : khi một list sản phẩm được đượckhai báo ở compoennt nào thì cái hàm xóá phải ở cùng cấp đó
+  // thế nên nhìn này
+
+  // cái hàm này được truyền xuống productAdd
+  const onHanldeAdd = async(data : ProductType) => {
+    // nấm để í nó không có id ??
+    // mình đang xóa thì mình cần cái gì nhỉ ??
+    // nó chỉ có name và price
+    // vâjy thì làm thế nào nó có id
+    // console.log(data);
+    // call api
+    // tôi call nhé
+    const response = await add(data);
+    console.log(response.data);
+    // load lại sản phẩm ở client
+    // khi có id rồi thì sẽ xóa được
+    setProducts([...products, response.data])
   }
   const onHanldeUpdate = async (product: ProductType) =>{
     const {data} = await update(product);
@@ -53,17 +81,19 @@ function App() {
           <Route path="/" element={<WebsiteLayout />}>
               <Route index element={<Homepage />} />
               <Route path="product">
-                <Route index element={<h1>Product Page</h1>} />
+                <Route index element={<Products />} />
                 <Route path=":id" element={<ProductDetail />} />
               </Route>
               
           </Route>
           <Route path="admin" element={<AdminLayout />}>
               <Route index element={<Navigate to="dashboard" />} />
-              <Route path="dashboard" element={<h1>Dashboard page</h1>} />
+              <Route path="dashboard" element={<h1></h1>} />
+        
               <Route path="products" element={<ProductManager products={products} onRemove={removeItem}/>} />
               <Route path="/admin/products/add" element={<ProductAdd onAdd={onHanldeAdd}/>} />
               <Route path=":id/edit" element={<ProductEdit onUpdate={onHanldeUpdate} />}/>
+              <Route path='/admin/users' element = {<UserManager  />} />
           </Route>
           <Route path='/singup' element={<Singup />}/>
           <Route path='/singin' element={<SignIn />}/>
