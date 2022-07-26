@@ -7,5 +7,6 @@ export type ProductType = {
       colorName : string,
       hex : string
     }],
-    img: string
+    img: string,
+    category: any
 }

@@ -1,4 +1,26 @@
 {
+  "categorys": [
+    {
+      "id":1,
+      "name": "Điện thoại",
+      "img": "https://www.seekpng.com/png/detail/18-184445_biu-tng-gi-in-thoi.png"
+    },
+    {
+      "id":2,
+      "name": "Đồng hồ",
+      "img":"https://images.fpt.shop/unsafe/filters:quality(90)/fptshop.com.vn/uploads/images/tin-tuc/93581/Originals/bd23418568f36e264e6cf5abcba2b705.png"
+    },
+    {
+      "id":3,
+      "name": "Ipad",
+      "img": "https://www.seekpng.com/png/full/40-406182_ipad-apple-logo-png-transparent-ipad-logo.png"
+    },
+    {
+      "id":4,
+      "name": "Macbook",
+      "img": "https://images.unsplash.com/photo-1554730501-8dd4db2b18cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+    }
+  ],
   "products": [
     {
       "name": "Iphone 5 :)) ",

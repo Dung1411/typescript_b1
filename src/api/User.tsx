@@ -7,12 +7,26 @@ export const list = () =>{
     return instance.get(url);
 }
 
-export const edit = (id: number,data : any) => {
+export const changeStatus = (id:any,data : any) => {
     const url = `/users/${id}`;
     return instance.put(url,data);
 }
 
-export const changeRole = (id: number,data : any) => {
+export const changeRole = (id:any,data : any) => {
+    const url = `/users/${id}/role`;
+    return instance.put(url,data);
+}
+
+export const getMe = (token : any) => {
+    const url = '/getme';
+    return instance.get(url,{
+        headers : {
+            'Authorization' : `Bearer ${token}`
+        }
+    })
+}
+
+export const edit = (id: number,data : any) => {
     const url = `/users/${id}`;
     return instance.put(url,data);
 }
@@ -23,5 +37,9 @@ export const addUser = (user: UserType) => {
 }
 export const signin = (user: UserType | any) => {
     const url = `/signin`;
+    return instance.post(url, user);
+}
+export const signup = (user: UserType | any) => {
+    const url = `/signup`;
     return instance.post(url, user);
 }

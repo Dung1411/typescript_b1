@@ -7,24 +7,12 @@ const Homepage = (props: Props) => {
     <div>
       <main>
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center" style={{ minHeight: '75vh' }}>
-          <div className="absolute top-0 w-full h-full bg-center bg-cover" style={{ backgroundImage: 'url("https://anphat.com.vn/media/banner/01_Mar2e17a16a64f7410613f050e753d7a2c0.jpg")' }}>
-            <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black" />
+          <div className="absolute top-0 w-full h-full bg-center bg-cover" style={{ backgroundImage: 'url("https://hanoicomputercdn.com/media/banner/13_Apr0468af6801f667e65b977404965133ce.png")' }}>
+            <span id="blackOverlay" className="w-full h-full absolute" />
           </div>
           <div className="container relative mx-auto">
             <div className="items-center flex flex-wrap">
-              <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                <div className="pr-12">
-                  <h1 className="text-white font-semibold text-5xl">
-                  Hân hoan chào hè cùng CKL 
-                  </h1>
-                  <p className="mt-4 text-lg text-gray-300">
-                  Bộ sưu tập áo thun cho 
-                  mọi phiên bản của bạn.
-                  Đa dạng từ chất liệu vải 
-                  đến kiểu dáng cho nàng lựa chọn
-                  </p>
-                </div>
-              </div>
+              
             </div>
           </div>
           <div className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden" style={{ height: 70 }}>
@@ -42,10 +30,10 @@ const Homepage = (props: Props) => {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                       <i className="fas fa-award" />
                     </div>
-                    <h6 className="text-xl font-semibold">Vân chuyển</h6>
+                    <h6 className="text-xl font-semibold">Khai chương cơ sở mới</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                      Nội thành Hà Nội : 20K <br/>
-                      Ngoại thành: 30K
+                      Số 57 Trần Phú Hà Đông Hà Nội <br/>
+                      <p>Tháng 5/2022</p>
                     </p>
                   </div>
                 </div>
@@ -56,10 +44,10 @@ const Homepage = (props: Props) => {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
                       <i className="fas fa-retweet" />
                     </div>
-                    <h6 className="text-xl font-semibold"></h6>
+                    <h6 className="text-xl font-semibold">Gian hàng thanh lý trên các cơ sở</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                      Keep you user engaged by providing meaningful information.
-                      Remember that by this time, the user is curious.
+                      Ưu đãi lên tới 50%<br/>
+                      Free ship toàn quốc
                     </p>
                   </div>
                 </div>
@@ -70,10 +58,10 @@ const Homepage = (props: Props) => {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
                       <i className="fas fa-fingerprint" />
                     </div>
-                    <h6 className="text-xl font-semibold">Verified Company</h6>
+                    <h6 className="text-xl font-semibold">Review Iphone 13</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                      Write a few lines about each one. A paragraph describing a
-                      feature will be enough. Keep you user engaged!
+                      Nhiều ưu đãi <br/>
+                      Free ship toàn quốc
                     </p>
                   </div>
                 </div>
@@ -85,19 +73,15 @@ const Homepage = (props: Props) => {
                   <i className="fas fa-user-friends text-xl" />
                 </div>
                 <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                  Working with us is a pleasure
+                MacBook Pro 2022
                 </h3>
                 <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-                  Don't let your uses guess by attaching tooltips and popoves to
-                  any element. Just make sure you enable them first via
-                  JavaScript.
+                Một thiết kế hoàn toàn mới với chip xử lý cực nhanh trên nền tảng M1 PRO và M1 MAX
                 </p>
                 <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-                  The kit comes with three pre-built pages to help you get started
-                  faster. You can change the text and images and you're good to
-                  go. Just make sure you enable them first via JavaScript.
+                Hiện tại, MacBook Pro 14-inch & 16-inch vừa ra mắt từ Apple.... Hiện đang có mặt tại Mac Center.
                 </p>
-                <a href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation" className="font-bold text-gray-800 mt-8">Check Tailwind Starter Kit!</a>
+                <a href="http://localhost:3000/product/6257d7248044371e0a56d15c" className="font-bold text-gray-800 mt-8">Chi tiết</a>
               </div>
               <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
@@ -129,18 +113,16 @@ const Homepage = (props: Props) => {
           <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
               <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
-                <img alt="..." className="max-w-full rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
+                <img alt="..." className="max-w-full w=158px rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
               </div>
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div className="md:pr-12">
                   <div className="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
                     <i className="fas fa-rocket text-xl" />
                   </div>
-                  <h3 className="text-3xl font-semibold">A growing company</h3>
+                  <h3 className="text-3xl font-semibold">iPhone 13/ 13 Pro/ 13 ProMax</h3>
                   <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                    The extension comes with three pre-built pages to help you get
-                    started faster. You can change the text and images and you're
-                    good to go.
+                  iPhone 13 – Siêu phẩm mới của "nhà Táo" sẽ đem đến trải nghiệm thú vị cho người dùng. Màu sắc mới, camera nhiều thay đổi, vi xử lý mạnh mẽ hơn, pin lâu hơn,… là những gì iPhone 13 sở hữu và chinh phục được những vị khách khó tính nhất. Cùng cập nhật thông tin, đặc điểm nổi bật về smartphone Apple này.
                   </p>
                   <ul className="list-none mt-6">
                     <li className="py-2">
@@ -150,7 +132,7 @@ const Homepage = (props: Props) => {
                         </div>
                         <div>
                           <h4 className="text-gray-600">
-                            Carefully crafted components
+                          Thiết kế được nâng cấp, tạo nên xu hướng mới. ...
                           </h4>
                         </div>
                       </div>
@@ -161,7 +143,7 @@ const Homepage = (props: Props) => {
                           <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i className="fab fa-html5" /></span>
                         </div>
                         <div>
-                          <h4 className="text-gray-600">Amazing page examples</h4>
+                          <h4 className="text-gray-600">Màn hình được trang bị công nghệ ProMotion OLED 120Hz. ...</h4>
                         </div>
                       </div>
                     </li>
@@ -171,7 +153,7 @@ const Homepage = (props: Props) => {
                           <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i className="far fa-paper-plane" /></span>
                         </div>
                         <div>
-                          <h4 className="text-gray-600">Dynamic components</h4>
+                          <h4 className="text-gray-600">Chip Apple A15 Bionic hiệu năng tuyệt đỉnh. ...</h4>
                         </div>
                       </div>
                     </li>
@@ -185,15 +167,15 @@ const Homepage = (props: Props) => {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold">Here are our heroes</h2>
+                <h2 className="text-4xl font-semibold">CKL chuyên các sản phẩm Apple</h2>
                 <p className="text-lg leading-relaxed m-4 text-gray-600">
-                  According to the National Oceanic and Atmospheric
-                  Administration, Ted, Scambos, NSIDClead scentist, puts the
-                  potentially record maximum.
+                  Bảo hành chính hãng 100% <br/>
+                  Sẵn tất cả các mặt hàng  <br/>
+                  Nhiều ưu đãi hấp dẫn
                 </p>
               </div>
             </div>
-            <div className="flex flex-wrap">
+            {/* <div className="flex flex-wrap">
               <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                 <div className="px-6">
                   <img alt="..." src="./assets/img/team-1-800x800.jpg" className="shadow-lg rounded-full max-w-full mx-auto" style={{ maxWidth: 120 }} />
@@ -266,10 +248,13 @@ const Homepage = (props: Props) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
-        <section className="pb-20 relative block bg-gray-900">
+        <div>
+          <img  className='mb-[40px] w-[100%]'   src="https://cdn.tgdd.vn/2022/04/banner/830-300-830x300-10.png" alt="" />
+        </div>
+        {/* <section className="pb-20 relative block bg-gray-900">
           <div className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style={{ height: 80 }}>
             <svg className="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x={0} y={0}>
               <polygon className="text-gray-900 fill-current" points="2560 0 2560 100 0 100" />
@@ -353,7 +338,7 @@ const Homepage = (props: Props) => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
 
     </div>

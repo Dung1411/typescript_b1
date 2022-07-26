@@ -2,7 +2,7 @@ import React from 'react'
 import { UserType } from './types/user'
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { addUser } from '../api/User'
+import { addUser,signup } from '../api/User'
 
 
 
@@ -20,7 +20,7 @@ const Singup = () => {
 
   const onSubmit: SubmitHandler<FormInputs> = async (data: UserType) => {
     // console.log(data);
-    await addUser({...data,role : 1,status : "active"})
+    await signup(data)
     navigate('/')
     
   }

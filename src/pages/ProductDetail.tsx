@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import { read } from '../api/Product';
 
 type Props = {}
 type ProductType = {
@@ -16,12 +17,14 @@ type ProductType = {
 
 const ProductDetail = (props: Props) => {
     const { id} = useParams();
-    const [product, setProduct] = useState<ProductType>(); // 1
+    const [product, setProduct] = useState<ProductType | {}>({}); // 1
     useEffect(() => { // 3
         const getProduct = async () => {
-            const response = await fetch('http://localhost:3001/products/'+id);
-            const data = await response.json();
-            setProduct(data);
+            const response = await read(id);
+            // const data = await response.json();
+            setProduct(response.data);
+            // console.log(data);
+            
         }   
         getProduct();
     }, []);
@@ -75,11 +78,11 @@ const ProductDetail = (props: Props) => {
           <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
             <div className="flex">
               <span className="mr-3">Color</span>
-              {product?.color.map((color) => {
+              {/* {product?.color.map((color) => {
                 return (
                   <button style={{background :color.hex }} className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none" />
                 )
-              })}
+              })} */}
             </div>
 
           </div>

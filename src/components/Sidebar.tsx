@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import AdminNavbar from './AdminNavbar';
 import Icon from '@material-tailwind/react/Icon';
 import H6 from '@material-tailwind/react/Heading6';
@@ -16,14 +16,14 @@ export default function Sidebar() {
                 className={`h-screen fixed top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`}
             >
                 <div className="flex-col items-stretch min-h-full flex-nowrap px-0 relative">
-                    <a
-                        href="https://material-tailwind.com?ref=mtd"
+                    <Link
+                        to="/"
                         target="_blank"
                         rel="noreferrer"
                         className="mt-2 text-center w-full inline-block"
                     >
-                        <H6 color="gray">Material Tailwind</H6>
-                    </a>
+                        <H6 color="gray">Dashboad</H6>
+                    </Link>
                     <div className="flex flex-col">
                         <hr className="my-4 min-w-full" />
 
@@ -49,6 +49,16 @@ export default function Sidebar() {
                                     Danh mục
                                 </NavLink>
                             </li> */}
+                            <li className="px-4 rounded-lg mb-2 text-gray-700">
+                                <Link
+                                    to="/admin/categorys"
+                                    rel="noreferrer"
+                                    className="flex items-center gap-4 text-sm font-light py-3"
+                                >
+                                    <Icon name="web" size="2xl" />
+                                    Danh mục sản phẩm
+                                </Link>
+                            </li>
                             <li className="rounded-lg mb-2 ">
                                 <NavLink
                                     to="/admin/products"
@@ -70,35 +80,26 @@ export default function Sidebar() {
                                 </NavLink>
                             </li>
                             <li className="px-4 rounded-lg mb-2 text-gray-700">
-                                <a
-                                    href="/singin"
+                                <Link
+                                    to="/singin"
                                     rel="noreferrer"
                                     className="flex items-center gap-4 text-sm font-light py-3"
                                 >
                                     <Icon name="fingerprint" size="2xl" />
                                     Login
-                                </a>
+                                </Link>
                             </li>
                             <li className="px-4 rounded-lg mb-2 text-gray-700">
-                                <a
-                                    href="/singup"
+                                <Link
+                                    to="/singup"
                                     rel="noreferrer"
                                     className="flex items-center gap-4 text-sm font-light py-3"
                                 >
                                     <Icon name="list_alt" size="2xl" />
                                     Register
-                                </a>
+                                </Link>
                             </li>
-                            <li className="px-4 rounded-lg mb-2 text-gray-700">
-                                <a
-                                    href="/"
-                                    rel="noreferrer"
-                                    className="flex items-center gap-4 text-sm font-light py-3"
-                                >
-                                    <Icon name="web" size="2xl" />
-                                    Trang chủ
-                                </a>
-                            </li>
+                            
                             {/* <li className="px-4 rounded-lg mb-2 text-gray-700">
                                 <a
                                     href="https://demos.creative-tim.com/material-tailwind-kit-react/#/profile"

@@ -9,7 +9,9 @@ const Products = (props: Props) => {
   const [products, setProducts] = useState<ProductType[]>([])
   useEffect(() => {
     const getProduct = async () => {
-      const { data } = await list()
+      const { data } = await list();
+      console.log(data);
+      
       setProducts(data)
     }
     getProduct()
@@ -44,7 +46,7 @@ const Products = (props: Props) => {
           {products?.map((item: any) =>
             <div tabIndex={0} className="focus:outline-none mx-2 w-72 xl:mb-0 mb-8">
               <div>
-              <Link to={`/product/${item.id}`}><img className='aspect-square object-cover ' alt="person capturing an image" src={item.img} /></Link>
+              <Link to={`/product/${item._id}`}><img className='aspect-square object-cover ' alt="person capturing an image" src={item.img} /></Link>
               </div>
               <div className="bg-white dark:bg-gray-800">
                 <div className="flex items-center justify-between px-4 pt-4">
@@ -57,7 +59,7 @@ const Products = (props: Props) => {
                 </div>
                 <div className="p-4">
                   <div className="flex items-center">
-                    <h2 tabIndex={0} className="focus:outline-none text-lg dark:text-white font-semibold"><Link to={`/product/${item.id}`}>{item.name}</Link></h2>
+                    <h2 tabIndex={0} className="focus:outline-none text-lg dark:text-white font-semibold"><Link to={`/product/${item._id}`}>{item.name}</Link></h2>
 
                   </div>
                   <p tabIndex={0} className="focus:outline-none line-clamp-4 text-xs text-gray-600 dark:text-gray-200 mt-2">{item.desc}</p>

@@ -4,7 +4,9 @@ import { signin } from "../api/User";
 import { useNavigate, Link } from 'react-router-dom';
 
 
-type Props = {};
+type Props = {
+    setUser : any
+};
 
 type InputForm = {
     email: string;
@@ -16,20 +18,17 @@ const SignIn = (props: Props) => {
     const navigate = useNavigate()
     const { register, handleSubmit, formState: {errors} } = useForm<InputForm>();
     const onSubmit: SubmitHandler<InputForm> = async (data : InputForm) => {        
-        const { data: user } = await signin(data);       
-        if(user.user.status === "active"){
-            if(user.user.role == "0"){
-                // admin ở đây
-                navigate('/admin/dashboard')
-            }else{
-                // user
-                navigate('/')
-            }
-
-            localStorage.setItem("token", user.accessToken);
+        const { data: user } = await signin(data);  
+        // console.log(user); 
+        if(user.user.status == 'block'){
+            return alert('Tai khoan bi khoa')
+        }
+        localStorage.setItem('token',user.token)
+         props.setUser(user.user)
+        if(user.user.role == "0"){
+            navigate('/admin/dashboard')
         }else{
-          
-            alert('Tài khoản của bạn bị khóa')
+            navigate('/')
         }
         
     };
